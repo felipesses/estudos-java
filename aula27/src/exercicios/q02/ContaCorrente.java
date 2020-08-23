@@ -33,5 +33,13 @@ public class ContaCorrente {
         saldo += valorInserido;
     }
 
+    void consultarSaldo() {
+        System.out.println("Saldo atual da conta: " + saldo);
+    }
+
+    boolean verificarChequeEspecial() {
+       return saldo < 0;
+    }
+
 
 }

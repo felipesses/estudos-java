@@ -13,13 +13,16 @@ public class Exer02 {
         boolean saqueEfetuado = conta.sacar(30);
 
         if (saqueEfetuado)
-            System.out.println("Saque efetuado com sucesso, novo valor: " + conta.saldo);
+            conta.consultarSaldo();
         else
             System.out.println("Saldo insuficiente");
 
         conta.depositar(20);
-        System.out.println("Depósito realizado com sucesso, novo valor: " + conta.saldo);
+        conta.consultarSaldo();
 
-
+        if (conta.verificarChequeEspecial())
+            System.out.println("Está usando cheque especial");
+        else
+            System.out.println("Não está usando cheque especial");
     }
 }
